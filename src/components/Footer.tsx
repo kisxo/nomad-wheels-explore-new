@@ -1,9 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Mountain, Facebook, Instagram, Twitter, Mail } from "lucide-react";
+ import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-foreground text-background">
+    <footer className="bg-neutral-950 text-background">
       <div className="container mx-auto px-6 py-16">
         <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-16">
           <div className="max-w-md">
@@ -53,7 +54,7 @@ const Footer = () => {
               <a href="#" className="text-background/80 hover:text-background transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-background/80 hover:text-background transition-colors">
+              <a href="https://www.instagram.com/nomadsonwheels_now/" className="text-background/80 hover:text-background transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
               <a href="#" className="text-background/80 hover:text-background transition-colors">
@@ -69,11 +70,12 @@ const Footer = () => {
         <div className="pt-8 border-t border-background/20">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2">
-              <Mountain className="h-6 w-6" />
+             
+<img src={logo} alt=""className="h-8 w-8 text-primary rounded"  />
               <span className="font-bold">NomadsOnWheels</span>
             </div>
             <p className="text-sm text-background/60">
-              © 2024 NomadsOnWheels. All rights reserved.
+              © 2025 NomadsOnWheels. All rights reserved.
             </p>
           </div>
         </div>

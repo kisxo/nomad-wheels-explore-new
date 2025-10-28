@@ -1,5 +1,5 @@
-import featureNature from "@/assets/feature-nature.jpg";
-import featureAdventure from "@/assets/feature-adventure.jpg";
+import featureNature from "@/assets/nature.webp";
+import featureAdventure from "@/assets/partner.webp";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-mountains.jpg";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -14,15 +15,15 @@ const Hero = () => {
       
       <div className="relative z-10 container mx-auto px-6 text-center text-white">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-          Pack your bags, let's go<br />somewhere amazing
+          The road is calling.
         </h1>
         <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-white/90">
-          Discover unforgettable adventures and create memories that last a lifetime with NomadsOnWheels
+          Where the journey matters more than the destination.
         </p>
-        <Button variant="hero" size="lg" className="group">
+        <Link to={"/destinations"} className="group bg-orange-500 py-3 px-6 flex w-fit mx-auto text-neutral-50 items-center rounded-xl">
           Read more
           <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-        </Button>
+        </Link>
       </div>
     </section>
   );

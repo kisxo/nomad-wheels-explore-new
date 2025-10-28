@@ -1,24 +1,24 @@
-import destItaly from "@/assets/destination-italy.jpg";
-import destJapan from "@/assets/destination-japan.jpg";
-import destIndonesia from "@/assets/destination-indonesia.jpg";
+import destShillong from "@/assets/shillong.png";
+import destTawang from "@/assets/tawang.png";
+import destDVally from "@/assets/dvally.png";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin } from "lucide-react";
 
 const destinations = [
   {
-    name: "Italy",
-    image: destItaly,
-    description: "Experience the romance of Italian coasts"
+    name: "Shillong",
+    image: destShillong,
+    description: "Scotland of the East,” waterfalls, music & cafés."
   },
   {
-    name: "Japan",
-    image: destJapan,
-    description: "Discover ancient culture and modern wonders"
+    name: "Tawang",
+    image: destTawang,
+    description: "Monasteries, snow-covered passes, serene mountain beauty."
   },
   {
-    name: "Indonesia",
-    image: destIndonesia,
-    description: "Explore tropical paradise islands"
+    name: "Dzukou Valley",
+    image: destDVally,
+    description: "“Valley of Flowers,” alpine rivers, hot springs."
   }
 ];
 
@@ -34,7 +34,7 @@ const Destinations = () => {
           </div>
           <div className="max-w-md">
             <p className="text-muted-foreground mb-6">
-              From pristine beaches to ancient cities, discover destinations that will take your breath away and create memories to last a lifetime.
+              Ride the Hidden Trails of Northeast India — Where Nature Whispers and Culture Speaks.
             </p>
             <Button variant="default" className="group">
               View All

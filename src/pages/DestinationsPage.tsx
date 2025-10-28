@@ -2,58 +2,63 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import italyImg from "@/assets/destination-italy.jpg";
-import japanImg from "@/assets/destination-japan.jpg";
-import indonesiaImg from "@/assets/destination-indonesia.jpg";
+import shillongImg from "@/assets/shillong.png";
+import cherrapunjiImg from "@/assets/Shillong & Cherrapunji Escape.png";
+import tawangImg from "@/assets/tawang.png";
+import kazirangaImg from "@/assets/kaziranga.png";
+import ziroImg from  "@/assets/Ziro Valley.png";
+import dawkiImg from "@/assets/dauki.png";
+
+
 
 const destinations = [
   {
     id: 1,
-    name: "Italy",
-    image: italyImg,
-    description: "Experience ancient history and world-class cuisine",
-    tours: 12,
-    price: "From $1,899"
+    name: "Shillong",
+    image: shillongImg,
+    description: "The Scotland of the East — cafés, music & misty hills",
+    tours: 8,
+    price: "From ₹9,499"
   },
   {
     id: 2,
-    name: "Japan",
-    image: japanImg,
-    description: "Discover the perfect blend of tradition and innovation",
-    tours: 15,
-    price: "From $2,499"
+    name: "Cherrapunji (Sohra)",
+    image: cherrapunjiImg,
+    description: "Living root bridges, waterfalls & cloud valleys",
+    tours: 6,
+    price: "From ₹10,999"
   },
   {
     id: 3,
-    name: "Indonesia",
-    image: indonesiaImg,
-    description: "Explore tropical paradise and vibrant cultures",
-    tours: 10,
-    price: "From $1,599"
+    name: "Tawang",
+    image: tawangImg,
+    description: "Monasteries, snow-clad passes & Himalayan serenity",
+    tours: 7,
+    price: "From ₹18,999"
   },
   {
     id: 4,
-    name: "Greece",
-    image: italyImg,
-    description: "Ancient ruins and stunning Mediterranean coastlines",
-    tours: 8,
-    price: "From $1,799"
+    name: "Kaziranga",
+    image: kazirangaImg,
+    description: "Home of the one-horned rhino — safaris & nature trails",
+    tours: 5,
+    price: "From ₹11,499"
   },
   {
     id: 5,
-    name: "Peru",
-    image: japanImg,
-    description: "Machu Picchu and Incan heritage await",
-    tours: 9,
-    price: "From $2,199"
+    name: "Ziro Valley",
+    image: ziroImg,
+    description: "Pine forests, Apatani culture & slow-travel calm",
+    tours: 4,
+    price: "From ₹16,999"
   },
   {
     id: 6,
-    name: "Iceland",
-    image: indonesiaImg,
-    description: "Land of fire, ice, and natural wonders",
-    tours: 7,
-    price: "From $2,899"
+    name: "Dawki & Mawlynnong",
+    image: dawkiImg,
+    description: "Crystal-clear rivers & Asia’s cleanest village experience",
+    tours: 9,
+    price: "From ₹8,999"
   }
 ];
 

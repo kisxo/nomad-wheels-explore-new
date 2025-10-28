@@ -4,76 +4,80 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Users, MapPin } from "lucide-react";
-import tourMountain from "@/assets/tour-mountain.jpg";
-import tourSunset from "@/assets/tour-sunset.jpg";
-import tourKyoto from "@/assets/tour-kyoto.jpg";
+import tourTawang from "@/assets/tawang.png";
+import tourShillong from "@/assets/Shillong & Cherrapunji Escape.png";
+import tourZiro from "@/assets/Ziro Valley.png";
+import tourKaziranga from "@/assets/kaziranga.png";
+import tourMajuli from "@/assets/majuli.png";
+import tourDzukou from "@/assets/dvally.png";
+
 
 const tours = [
   {
     id: 1,
-    name: "Alpine Adventure",
-    image: tourMountain,
-    destination: "Swiss Alps",
+    name: "Tawang Himalayan Expedition",
+    image: tourTawang,
+    destination: "Tawang, Arunachal Pradesh",
     duration: "7 Days",
     groupSize: "8-12",
-    price: "$2,499",
+    price: "₹22,499",
     category: "Adventure",
-    description: "Trek through stunning mountain landscapes and charming villages"
+    description: "Ride through high-altitude passes, monasteries, prayer flags and snow-laden landscapes."
   },
   {
     id: 2,
-    name: "Mediterranean Dreams",
-    image: tourSunset,
-    destination: "Greek Islands",
-    duration: "10 Days",
+    name: "Shillong & Cherrapunji Retreat",
+    image: tourShillong,
+    destination: "Meghalaya",
+    duration: "5 Days",
     groupSize: "10-15",
-    price: "$1,899",
+    price: "₹12,999",
     category: "Relaxation",
-    description: "Island hopping adventure with pristine beaches and ancient ruins"
+    description: "Waterfalls, clouds, cafés, living root bridges and peaceful hill vibes."
   },
   {
     id: 3,
-    name: "Cultural Journey",
-    image: tourKyoto,
-    destination: "Kyoto, Japan",
-    duration: "8 Days",
+    name: "Ziro Valley Cultural Journey",
+    image: tourZiro,
+    destination: "Ziro, Arunachal Pradesh",
+    duration: "6 Days",
     groupSize: "6-10",
-    price: "$2,799",
+    price: "₹18,999",
     category: "Culture",
-    description: "Immerse yourself in traditional Japanese culture and temples"
+    description: "Experience Apatani tribal heritage, pine forests, music, and slow-living beauty."
   },
   {
     id: 4,
-    name: "Safari Expedition",
-    image: tourMountain,
-    destination: "Tanzania",
-    duration: "12 Days",
+    name: "Kaziranga Jungle Safari",
+    image: tourKaziranga,
+    destination: "Kaziranga, Assam",
+    duration: "3 Days",
     groupSize: "8-12",
-    price: "$3,499",
+    price: "₹9,499",
     category: "Wildlife",
-    description: "Witness the great migration and incredible wildlife"
+    description: "Spot the one-horned rhino, elephants and exotic birds in a UNESCO wildlife reserve."
   },
   {
     id: 5,
-    name: "Ancient Wonders",
-    image: tourSunset,
-    destination: "Egypt",
-    duration: "9 Days",
+    name: "Majuli Heritage Island Tour",
+    image: tourMajuli,
+    destination: "Majuli, Assam",
+    duration: "4 Days",
     groupSize: "12-16",
-    price: "$2,199",
+    price: "₹10,499",
     category: "History",
-    description: "Explore pyramids, temples, and the mysteries of ancient Egypt"
+    description: "Discover Satras, river island culture, traditional arts and serene landscapes."
   },
   {
     id: 6,
-    name: "Northern Lights",
-    image: tourKyoto,
-    destination: "Iceland",
+    name: "Dzukou Valley Trek & Cloud Walk",
+    image: tourDzukou,
+    destination: "Nagaland",
     duration: "6 Days",
     groupSize: "6-8",
-    price: "$2,899",
+    price: "₹14,999",
     category: "Nature",
-    description: "Chase the aurora and discover Iceland's natural wonders"
+    description: "Trek across grass-covered valleys, floating clouds and breathtaking ridgelines."
   }
 ];
 

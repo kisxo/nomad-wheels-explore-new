@@ -1,32 +1,33 @@
-import tourMountain from "@/assets/tour-mountain.jpg";
-import tourSunset from "@/assets/tour-sunset.jpg";
-import tourKyoto from "@/assets/tour-kyoto.jpg";
+import Shillong from "@/assets/Shillong & Cherrapunji Escape.png";
+import tawangRoad from "@/assets/tawang_road.png";
+import tourZiro from "@/assets/Ziro Valley.png";
 import { Button } from "@/components/ui/button";
 import { Clock, Users } from "lucide-react";
 
 const tours = [
   {
-    title: "Rocky Mountain Adventure",
-    image: tourMountain,
+    title: "Shillong & Cherrapunji Escape",
+    image: Shillong, // Replace with your image import
+    duration: "4 days",
+    groupSize: "Small group",
+    price: "From ₹12,999"
+  },
+  {
+    title: "Tawang Himalayan Road Trip",
+    image: tawangRoad, // Replace with your image import
     duration: "7 days",
-    groupSize: "Small group",
-    price: "From $1,299"
+    groupSize: "Rider / SUV Tour",
+    price: "From ₹22,499"
   },
   {
-    title: "Sunrise Sunset Escape",
-    image: tourSunset,
-    duration: "5 days",
-    groupSize: "Private tour",
-    price: "From $899"
-  },
-  {
-    title: "Kyoto Cultural Journey",
-    image: tourKyoto,
-    duration: "10 days",
-    groupSize: "Small group",
-    price: "From $2,199"
+    title: "Ziro Valley Cultural Retreat",
+    image: tourZiro, // Replace with your image import
+    duration: "6 days",
+    groupSize: "Private / Group",
+    price: "From ₹18,999"
   }
 ];
+
 
 const Tours = () => {
   return (
@@ -34,11 +35,11 @@ const Tours = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Top tours to spark your<br />wanderlust
+            Roads That Call Your Name, Start the Journey
           </h2>
           <p className="text-lg text-muted-foreground">
-            Explore our curated selection of unforgettable adventures. From challenging mountain treks 
-            to cultural immersions, find the perfect journey that speaks to your adventurous spirit.
+            Discover our most loved adventures.
+Handpicked routes. Authentic experiences. Memories for a lifetime.
           </p>
         </div>
         
