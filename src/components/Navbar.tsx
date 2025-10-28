@@ -1,18 +1,12 @@
 import React, { useState } from "react";
-import { Mountain } from "lucide-react";
 import logo from "@/assets/logo.png";
+import { Link as RouterLink } from "react-router-dom";
 
-
-/**
- * Props:
- * - LinkComponent: optional component to render links (e.g. react-router's Link).
- *                  If omitted, plain <a> will be used.
- * - links: optional array of { to, label } objects
- */
-export default function Header({ LinkComponent = null, links = null }) {
+export default function Header({ LinkComponent = RouterLink, links = null }) {
   const [open, setOpen] = useState(false);
 
-  const Link = ({ to, children, className = "", ...rest }) => {
+  // ✅ safe wrapper
+  const SmartLink = ({ to, children, className = "", ...rest }) => {
     if (LinkComponent) {
       return (
         <LinkComponent to={to} className={className} {...rest}>
@@ -20,7 +14,6 @@ export default function Header({ LinkComponent = null, links = null }) {
         </LinkComponent>
       );
     }
-    // fallback to anchor
     return (
       <a href={to} className={className} {...rest}>
         {children}
@@ -43,32 +36,30 @@ export default function Header({ LinkComponent = null, links = null }) {
       <div className="container mx-auto px-6 py-3">
         <div className="flex items-center justify-between">
           {/* Brand */}
-          <Link to="/" className="flex items-center gap-3">
-            {/* simple mountain SVG logo */}
-            <img src={logo} alt=""className="h-8 w-8 text-primary rounded"  />
-            {/* <Mountain /> */}
+          <SmartLink to="/" className="flex items-center gap-3">
+            <img src={logo} alt="" className="h-8 w-8 rounded" />
             <span className="text-xl font-bold tracking-tight text-gray-900">
               NomadsOnWheels
             </span>
-          </Link>
+          </SmartLink>
 
           {/* Desktop links */}
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((item) =>
               item.isButton ? (
-                <Link key={item.to} to={item.to}>
+                <SmartLink key={item.to} to={item.to}>
                   <button className="inline-flex items-center px-4 py-2 rounded-md bg-gray-900 text-white text-sm font-medium hover:bg-gray-800 transition">
                     {item.label}
                   </button>
-                </Link>
+                </SmartLink>
               ) : (
-                <Link
+                <SmartLink
                   key={item.to}
                   to={item.to}
                   className="text-gray-700 hover:text-primary transition-colors text-sm font-medium"
                 >
                   {item.label}
-                </Link>
+                </SmartLink>
               )
             )}
           </nav>
@@ -79,50 +70,47 @@ export default function Header({ LinkComponent = null, links = null }) {
               onClick={() => setOpen((v) => !v)}
               aria-expanded={open}
               aria-label="Toggle menu"
-              className="p-2 rounded-md inline-flex items-center justify-center text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+              className="p-2 rounded-md inline-flex items-center justify-center text-gray-700 hover:bg-gray-100"
             >
-              {/* hamburger / close icon */}
               {open ? (
-                // X icon
                 <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none">
-                  <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="2" />
                 </svg>
               ) : (
-                // hamburger
                 <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none">
-                  <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" strokeWidth="2" />
                 </svg>
               )}
             </button>
           </div>
         </div>
 
-        {/* Mobile menu */}
+        {/* Mobile Menu */}
         <div
-          className={`md:hidden mt-3 transition-[max-height,opacity] duration-200 ease-out overflow-hidden ${
+          className={`md:hidden mt-3 transition-[max-height,opacity] duration-200 overflow-hidden ${
             open ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
           }`}
         >
           <div className="flex flex-col gap-2">
             {navLinks.map((item) =>
               item.isButton ? (
-                <Link key={item.to} to={item.to} className="block">
+                <SmartLink key={item.to} to={item.to} className="block">
                   <button
                     onClick={() => setOpen(false)}
-                    className="w-full text-left px-4 py-2 rounded-md bg-gray-900 text-white text-sm font-medium hover:bg-gray-800 transition"
+                    className="w-full px-4 py-2 rounded-md bg-gray-900 text-white text-sm font-medium hover:bg-gray-800 transition"
                   >
                     {item.label}
                   </button>
-                </Link>
+                </SmartLink>
               ) : (
-                <Link
+                <SmartLink
                   key={item.to}
                   to={item.to}
                   onClick={() => setOpen(false)}
                   className="block px-4 py-2 rounded-md text-gray-700 hover:text-primary hover:bg-gray-50 transition"
                 >
                   {item.label}
-                </Link>
+                </SmartLink>
               )
             )}
           </div>
